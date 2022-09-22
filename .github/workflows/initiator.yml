@@ -9,19 +9,19 @@ jobs:
   Initiator:
     runs-on: ubuntu-latest
     steps:
-      - name: Prepare PR
-        run: |
-          echo "PR_REPO_NAME=$(echo ${{ github.event.pull_request.head.repo.full_name }} | cut -d/ -f2)" >> $GITHUB_ENV
-          echo "PR_REPO_OWNER=$(echo ${{ github.event.pull_request.head.repo.full_name }} | cut -d/ -f1)" >> $GITHUB_ENV
-          echo "PR_BR_NAME=$(echo ${{ github.head_ref }})">>$GITHUB_ENV
-          echo "OR_REPO_NAME=$(echo ${{ github.repository }} | cut -d/ -f2)" >> $GITHUB_ENV
-          echo "OR_REPO_OWNER=$(echo ${{ github.repository }} | cut -d/ -f1)" >> $GITHUB_ENV
+        - name: Prepare PR
+          run: |
+            echo "PR_REPO_NAME=$(echo ${{ github.event.pull_request.head.repo.full_name }} | cut -d/ -f2)" >> $GITHUB_ENV
+            echo "PR_REPO_OWNER=$(echo ${{ github.event.pull_request.head.repo.full_name }} | cut -d/ -f1)" >> $GITHUB_ENV
+            echo "PR_BR_NAME=$(echo ${{ github.head_ref }})">>$GITHUB_ENV
+            echo "OR_REPO_NAME=$(echo ${{ github.repository }} | cut -d/ -f2)" >> $GITHUB_ENV
+            echo "OR_REPO_OWNER=$(echo ${{ github.repository }} | cut -d/ -f1)" >> $GITHUB_ENV
 
 
-          echo ${{ PR_REPO_NAME }}===PR_REPO_NAME
-          echo ${{ PR_REPO_OWNER }}===PR_REPO_OWNER
-          echo ${{ PR_BR_NAME }}===PR_BR_NAME
-          echo ${{ OR_REPO_NAME }}===OR_REPO_NAME
-          echo ${{ OR_REPO_OWNER }}===OR_REPO_OWNER
-            
+            echo ${{ PR_REPO_NAME }}===PR_REPO_NAME
+            echo ${{ PR_REPO_OWNER }}===PR_REPO_OWNER
+            echo ${{ PR_BR_NAME }}===PR_BR_NAME
+            echo ${{ OR_REPO_NAME }}===OR_REPO_NAME
+            echo ${{ OR_REPO_OWNER }}===OR_REPO_OWNER
+              
 
