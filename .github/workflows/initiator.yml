@@ -18,10 +18,10 @@ jobs:
             echo "OR_REPO_OWNER=$(echo ${{ github.repository }} | cut -d/ -f1)" >> $GITHUB_ENV
 
 
-            echo $PR_REPO_NAME===PR_REPO_NAME
-            echo $PR_REPO_OWNER===PR_REPO_OWNER
-            echo $PR_BR_NAME===PR_BR_NAME
-            echo $OR_REPO_NAME===OR_REPO_NAME
-            echo $OR_REPO_OWNER===OR_REPO_OWNER
+            echo ${{ PR_REPO_NAME }}===PR_REPO_NAME
+            echo ${{ PR_REPO_OWNER }}===PR_REPO_OWNER
+            echo ${{ PR_BR_NAME }}===PR_BR_NAME
+            echo ${{ OR_REPO_NAME }}===OR_REPO_NAME
+            echo ${{ OR_REPO_OWNER }}===OR_REPO_OWNER
             
 
