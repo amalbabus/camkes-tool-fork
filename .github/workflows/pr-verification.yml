@@ -39,6 +39,7 @@ jobs:
             echo $REPO_NAME
         - name: manifest generation
           run: |
+            echo $PR_REPO_OWNER
             if  [[ "${{ github.event.pull_request.head.repo.full_name }}" != "${{  github.repository }}" ]] ; then
             echo pr from forked repo
             sed -i "/<manifest>/a <remote name=\"$PR_REPO_OWNER\" fetch=\"https://github.com/$PR_REPO_OWNER\"/>" ./tii_sel4_manifest/external.xml
