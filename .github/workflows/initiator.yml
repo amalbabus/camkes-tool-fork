@@ -3,7 +3,7 @@ name: Initiator
 on:
   pull_request:
     types:
-      - "opened"
+      - opened
 
 jobs:
   Initiator:
