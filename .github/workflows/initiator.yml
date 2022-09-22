@@ -1,4 +1,4 @@
-name: Initiator
+name: initiator
 
 on:
   pull_request:
