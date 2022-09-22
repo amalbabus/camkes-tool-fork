@@ -21,7 +21,7 @@ jobs:
             echo "PR_REPO_OWNER=$(echo ${{ github.event.pull_request.head.repo.full_name }} | cut -d/ -f1)" >> $GITHUB_ENV
             echo "OR_REPO_NAME=$(echo ${{ github.repository }} | cut -d/ -f2)" >> $GITHUB_ENV
 
-            echo $REPO_OWNER
+            echo $OR_REPO_NAME
             
             echo PRrepo==${{ github.event.pull_request.head.repo.full_name }}
             echo ORrepo==${{ github.repository }}
